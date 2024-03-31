@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Load Leaflet CSS and JavaScript-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+    <!--Load Leaflet.draw CSS and JavaScript-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
+
+    <!--Load Turf.js-->
+    <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      #mapid {
+        height: calc(100vh - 30px);
+      } 
+
+      #buttonContainer {
+        position: fixed;
+        top: 90%;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: #1e66eb;
+        border-bottom: 1px solid #ccc;
+        z-index: 1000; 
+      }
+      
+      #simplifyButton,
+      #removeButton {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        margin-right: 10px;
+      }
+
+     
+    </style>
+  </head>
+  <body>
+    <h2>Line Simplification Web Application</h2>
+    <div id="buttonContainer">
+      <button id="simplifyButton">Simplify</button>
+      <button id="removeButton">Remove</button>
+    </div>
+
+    <div id="mapid"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
